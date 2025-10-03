@@ -26,36 +26,203 @@
 
   --Rose-800: hsl(332, 51%, 32%);
   --Rose-50: hsl(330, 100%, 98%);
+
+  --outlier: "Outfit", "sans-serif";
+  --youngserif: "YoungSerif", "Arial";
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--Stone-100);
+  background-color: var(--Stone-100);
 }
 
-#container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: auto;
-    margin: 80px auto;
-    border: 1px solid var(--White);
-    border-radius: 10px;
-    background-color: var(--White);
-    padding: 20px;
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  margin: 80px auto;
+  border: 1px solid var(--White);
+  border-radius: 10px;
+  background-color: var(--White);
+  padding: 20px;
 }
 
 #omelette img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+h1{
+  font-family: var(--youngserif);
+  font-weight: normal;
+  color: var(--Stone-900);
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--Stone-150);
+  border: 0;
+}
+
+#intro p{
+  font-family: var(--outlier);
+  color: var(--Brown-800);
+  padding-bottom: 10px;
+}
+
+#preparation{
+  padding: 20px;
+  background-color: var(--Rose-50);
+  border-radius: 10px;
+}
+
+#preparation h2{
+  font-family: var(--outlier);
+  font-size: 20px;
+  color: var(--Rose-800);
+  padding-bottom: 10px;
+}
+
+#preparation ul{
+  padding-left: 20px;
+}
+
+#preparation ul li{
+  font-family: var(--outlier);
+  color: var(--Brown-800);
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+#preparation ul li:last-child{
+  padding-bottom: 0px;
+}
+
+#ingredients{
+  color: var(--Brown-800);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#ingredients h2{
+  font-family: var(--youngserif);
+  font-weight: normal;
+}
+
+#ingredients ul{
+  font-family: var(--outlier);
+  padding-left: 20px;
+}
+
+#ingredients ul li{
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+#ingredients ul li:first-child{
+  padding-top: 20px;
+}
+
+#instructions{
+  color: var(--Brown-800);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#instructions h2{
+  font-family: var(--youngserif);
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+#instructions ol{
+  font-family: var(--outlier);
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+#instructions ol li{
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+#instructions ol li::marker{
+  font-weight: bold;
+}
+
+#nutrition{
+  font-family: var(--outlier);
+  color: var(--Brown-800);
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#nutrition h2{
+ font-family: var(--youngserif);
+ font-weight: normal;
+ padding-bottom: 20px;
+}
+
+#nutrition p{
+  padding-bottom: 20px;
+}
+
+#nutrition table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  ;
+}
+
+tr{
+  border-bottom: 1px solid var(--Stone-150);
+}
+
+tr:last-child{
+  border-bottom: none;
+}
+
+@media (max-width: 445px) {
+  #container{
+    width: 60%;
+  }
+}
+
+@media (max-width: 376px) {
+  #container{
     width: 100%;
-    height: auto;
-    border-radius: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: 0px;
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+  }
+
+  body{
+    background-color: none;
+  }
+
+  #omelette img{
+    border-radius: 0px;
+  }
+
+  #content{
+    padding: 20px;
+    padding-top: 0px;
+  }
 }
