@@ -187,7 +187,14 @@ hr {
 th, td {
   padding: 10px;
   text-align: left;
-  ;
+}
+
+th{
+  font-weight: normal;
+}
+
+td{
+  font-weight: bold;
 }
 
 tr{
